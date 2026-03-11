@@ -12,7 +12,7 @@ Requisitos
   
  Pasos
 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/nightmare-games.git
+git clone https://github.com/JDAB-04/nightmare-games.git
 
 
 2. Entrar a la carpeta
