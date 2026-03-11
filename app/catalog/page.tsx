@@ -9,7 +9,7 @@ export default async function CatalogPage({
 }: {
     searchParams: Promise<{ category?: string; platform?: string; 'sort-by'?: string }>;
 }) {
-    // Debes hacer await para obtener los valores
+    // await para obtener los valores
     const params = await searchParams;
 
     let games: GameSummary[] = [];

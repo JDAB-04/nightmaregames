@@ -3,12 +3,19 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getGameById } from '@/lib/api';
 
+// params es una Promise que resuelve al objeto con el id de la URL
 export default async function GamePage({ params }: { params: { id: string } }) {
+
+    // Esperamos a que params resuelva para obtener el id
+    const { id } = await params;
+
     let game;
 
     try {
-        game = await getGameById(params.id);
+        // Llamamos a la API con el id obtenido de la URL
+        game = await getGameById(id);
     } catch {
+        // Si el juego no existe o hay error, Next.js muestra la página 404
         notFound();
     }
 
