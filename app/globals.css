@@ -32,6 +32,42 @@ img {
   max-width: 100%;
 }
 
+.button {
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.212);
+}
+
+.footer-link:hover {
+  color: #00ff88 !important;
+}
+
+.social-icon:has(.twitter-icon):hover {
+  border-color: #1da1f2 !important;
+  color: #1da1f2 !important;
+}
+
+.social-icon:has(.youtube-icon):hover {
+  border-color: #ff0000 !important;
+  color: #ff0000 !important;
+}
+
+.social-icon:has(.message-icon):hover {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.social-icon:has(.twitch-icon):hover {
+  border-color: #9146ff !important;
+  color: #9146ff !important;
+}
+
 /* Animación de entrada para las tarjetas */
 @keyframes fadeUp {
   from {
@@ -57,6 +93,7 @@ img {
   transition: transform 0.2s, border-color 0.2s;
 }
 
+/* Tarjeta holográfica Hero*/
 .holographic-card {
   display: flex;
   justify-content: center;
@@ -94,7 +131,7 @@ img {
   transform: rotate(-45deg) translateY(100%);
 }
 
-/* Scrollbar */
+/* Scrollbar personalizado*/
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -108,7 +145,7 @@ img {
   border-radius: 3px;
 }
 
-/* Responsive */
+/* Responsividad */
 @media (max-width: 768px) {
   h1 {
     font-size: 32px !important;

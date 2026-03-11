@@ -33,11 +33,11 @@ export default function Hero() {
                         <span style={{ color: '#00ff88' }}>LOS MEJORES</span><br />
                         JUEGOS GRATIS
                     </h1>
-                    <p style={{ color: '#7d8b9c', fontSize: '16px', marginBottom: '40px', maxWidth: '480px' }}>
+                    <p style={{ color: '#7d8b9c', fontSize: '16px', fontWeight: 'bold', marginBottom: '40px', maxWidth: '480px' }}>
                         Más de 400 juegos free-to-play. Filtra por género y encuentra tu próximo favorito.
                     </p>
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                        <Link href="/catalog" style={{
+                        <Link className='button' href="/catalog" style={{
                             padding: '12px 32px',
                             backgroundColor: '#00ff88',
                             color: '#080c10',
@@ -47,7 +47,7 @@ export default function Hero() {
                         }}>
                             Explorar catálogo →
                         </Link>
-                        <Link href="/catalog?category=shooter" style={{
+                        <Link className='button' href="/catalog?category=shooter" style={{
                             padding: '12px 32px',
                             border: '1px solid #1e2d3d',
                             borderRadius: '4px',
