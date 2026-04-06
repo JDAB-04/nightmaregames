@@ -1,9 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import LogoutButton from './LogoutButton';
 import { usePathname } from 'next/navigation';
+import { useAuthStore } from '@/app/store/authStore';
 
 export default function Navbar() {
+    const { isAuthenticated, user } = useAuthStore();
     const pathname = usePathname();
 
     return (
@@ -47,6 +50,25 @@ export default function Navbar() {
                     </Link>
                 ))}
             </div>
+            {isAuthenticated ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ color: '#7d8b9c', fontSize: '12px' }}>
+                        👾 {user?.username}
+                    </span>
+                    <LogoutButton />
+                </div>
+            ) : (
+                <Link href="/login" style={{
+                    padding: '6px 16px',
+                    backgroundColor: '#00ff88',
+                    color: '#080c10',
+                    borderRadius: '4px',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                }}>
+                    Iniciar sesión
+                </Link>
+            )}
         </nav >
     );
 }
